@@ -1,0 +1,8 @@
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+MeshCore = "43a99bba-f459-4d0e-8139-f3df11d847d4"
+MeshKeeper = "484b717a-98b9-4b0c-89dc-fb7d7e739263"
+MeshMaker = "eff96cbd-3442-458f-9fe2-6cad589fe5e1"
+MeshPorter = "ba998677-2e4b-4950-b481-8cc4322dc218"
+PGFPlotsX = "8314cec4-20b6-5062-9cdb-752b83310925"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
