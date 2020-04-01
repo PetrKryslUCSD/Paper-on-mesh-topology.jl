@@ -10,7 +10,7 @@ using PGFPlotsX
             legend_columns = -1
         },
         ylabel = "Storage in megabyte",
-        symbolic_x_coords=["MeshCore MIN", "MeshCore 32", "MeshCore 64", "MDS-RED", "MOAB", "MDS", "GRUMMP", "STK"],
+        symbolic_x_coords=["MeshCore D", "MeshCore D/U", "MeshCore 32", "MeshCore 64", "MDS-RED", "MOAB", "MDS", "GRUMMP", "STK"],
         xtick = "data",
         xticklabel_style={
         rotate=45,
@@ -19,7 +19,7 @@ using PGFPlotsX
         nodes_near_coords,
         nodes_near_coords_align={vertical},
     },
-    Plot(Coordinates([("MeshCore MIN", 2.1), ("MeshCore 32", 8.0), ("MeshCore 64", 15.7), ("MDS-RED", 6.4), ("MOAB", 10), ("MDS", 23.4), ("GRUMMP", 39.8), ("STK", 67.6)]))
+    Plot(Coordinates([("MeshCore D", 2.09), ("MeshCore D/U", 3.7), ("MeshCore 32", 13.2), ("MeshCore 64",  26.0), ("MDS-RED", 6.4), ("MOAB", 10), ("MDS", 23.4), ("GRUMMP", 39.8), ("STK", 67.6)]))
 )
 
 display(a)
