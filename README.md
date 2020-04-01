@@ -1,12 +1,18 @@
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 
-# OmniMesh.jl
+# PaperMeshTopo.jl
 
-Small meta-package for creation, management, and manipulation of meshes for the
-Finite Element Methods (FEM).
+Tiny package to demonstrate management of mesh topology with the method described in the paper "Lightweight finite element mesh database in Julia" ( to be submitted).
 
-pkg"dev ../MeshCore.jl"
-pkg"dev ../MeshPorter.jl"
-pkg"dev ../MeshKeeper.jl"
-pkg"dev ../MeshMaker.jl"
+To run these examples, clone this repository
+```
+git clone https://github.com/PetrKryslUCSD/PaperMeshTopo.jl.git
+```
+and run one of the example files
+```
+fullonelevel.jl  
+simpledown.jl        
+simpledownup.jl 
+```
+The file `memoryplot.jl` produces the plot comparing memory usage in the paper.
