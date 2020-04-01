@@ -13,13 +13,8 @@ using MeshMaker: T4block
 using BenchmarkTools
 using Test
 
-function allocmem(v) 
-    n = 0
-    for i in 1:length(v)
-        n += sizeof(v[i])
-    end
-    return n
-end
+include("usedbytes.jl")
+
 function test()
     n = 3
     membytes = 0; summembytes = 0
@@ -28,17 +23,17 @@ function test()
     ir30 = connectivity
     @show "($(manifdim(ir30.left)), $(manifdim(ir30.right)))"
     @show (nshapes(ir30.left), nshapes(ir30.right))
-    @show membytes = allocmem(ir30._v)
+    @show membytes = usedbytes(ir30._v)
     summembytes += membytes
     geom = attribute(ir30.right, "geom")
-    @show membytes = allocmem(locations(geom.val)._v)
+    @show membytes = usedbytes(locations(geom.val)._v)
     summembytes += membytes
 
     @info "Transpose. (0, 3)"
     @time tr03 = transpose(ir30)
     @show "($(manifdim(tr03.left)), $(manifdim(tr03.right)))"
     @show (nshapes(tr03.left), nshapes(tr03.right))
-    @show membytes = allocmem(tr03._v)
+    @show membytes = usedbytes(tr03._v)
     summembytes += membytes
     @show summembytes
 

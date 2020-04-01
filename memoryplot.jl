@@ -19,7 +19,7 @@ using PGFPlotsX
         nodes_near_coords,
         nodes_near_coords_align={vertical},
     },
-    Plot(Coordinates([("MeshCore D", 2.09), ("MeshCore D/U", 3.7), ("MeshCore 32", 13.2), ("MeshCore 64",  26.0), ("MDS-RED", 6.4), ("MOAB", 10), ("MDS", 23.4), ("GRUMMP", 39.8), ("STK", 67.6)]))
+    Plot(Coordinates([("MeshCore D", 2.09), ("MeshCore D/U", 3.9), ("MeshCore 32", 16.0), ("MeshCore 64",  28.8), ("MDS-RED", 6.4), ("MOAB", 10), ("MDS", 23.4), ("GRUMMP", 39.8), ("STK", 67.6)]))
 )
 
 display(a)
