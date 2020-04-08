@@ -4,7 +4,7 @@
 
 # PaperMeshTopo.jl
 
-Tiny package to demonstrate management of mesh topology with the method described in the paper "Lightweight finite element mesh database in Julia" ( to be submitted).
+Tiny package to demonstrate management of mesh topology with the method described in the paper "Lightweight finite element mesh database in Julia" (to be submitted to the Internation Journal for Numerical Methods in Engineering).
 
 To run these examples, clone this repository
 ```
