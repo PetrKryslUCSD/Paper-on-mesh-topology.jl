@@ -7,9 +7,9 @@ the incidence relation (3, 0), (0, 3) and the locations of the vertices.
 """
 module simpledownup
 using StaticArrays
-using MeshCore: Locations, nvertices, coordinates, nshapes, skeleton, bbyfacets, manifdim, transpose, attribute, locations
-using MeshPorter: vtkwrite
-using MeshMaker: T4block
+using MeshCore: nvertices, nshapes, manifdim, attribute
+using MeshCore: ir_skeleton, ir_bbyfacets, ir_transpose
+using MeshSteward: vtkwrite, T4block
 using BenchmarkTools
 using Test
 
@@ -26,16 +26,16 @@ function test()
     @show membytes = usedbytes(ir30._v)
     summembytes += membytes
     geom = attribute(ir30.right, "geom")
-    @show membytes = usedbytes(locations(geom.val)._v)
+    @show membytes = usedbytes(geom.v)
     summembytes += membytes
 
     @info "Transpose. (0, 3)"
-    @time tr03 = transpose(ir30)
+    @time tr03 = ir_transpose(ir30)
     @show "($(manifdim(tr03.left)), $(manifdim(tr03.right)))"
     @show (nshapes(tr03.left), nshapes(tr03.right))
     @show membytes = usedbytes(tr03._v)
     summembytes += membytes
-    @show summembytes
+    @show summembytes/2^20
 
     # vtkwrite("speedtest1", connectivity)
     true
