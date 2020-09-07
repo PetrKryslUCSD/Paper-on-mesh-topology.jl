@@ -29,6 +29,7 @@ function test()
     @show membytes = usedbytes(geom.v)
     summembytes += membytes
 
+    ts = time()
     @info "Skeleton: facets. (2, 0)"
     @time ir20 = ir_skeleton(ir30)
     @show "($(manifdim(ir20.left)), $(manifdim(ir20.right)))"
@@ -77,8 +78,10 @@ function test()
     @show (nshapes(tr23.left), nshapes(tr23.right))
     @show membytes = usedbytes(tr23._v)
     summembytes += membytes
+    
+    # Print the total number of megabytes used to store the database
     @show summembytes/2^20
-
+    @show time() - ts
 
     # vtkwrite("speedtest1", connectivity)
     true

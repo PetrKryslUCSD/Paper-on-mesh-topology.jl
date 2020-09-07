@@ -30,6 +30,7 @@ function test()
     @show membytes = usedbytes(geom.v)
     summembytes += membytes
 
+    # Print the total number of megabytes used to store the database
     @show summembytes/2^20
 
     # vtkwrite("speedtest1", connectivity)

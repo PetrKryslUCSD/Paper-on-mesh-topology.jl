@@ -1,3 +1,5 @@
+# petsc-3.13.5/src/dm/impls/plex/tutorials/ex1.c
+
 C_code ="""
 #include <petscdmplex.h>
 
@@ -58,11 +60,7 @@ int main(int argc, char **argv)
 }
 """
 
-# Calculation according to Matt Knepley:
-Nv =  19096
-Ne = 125169
-Nf = 208134
-Nc = 102060
+# Reported by the running program:
 # Labels:
 #   celltype: 4 strata with value/size (0 (19096), 6 (102060), 3 (208134), 1 (125169))
 #   depth: 4 strata with value/size (0 (19096), 1 (125169), 2 (208134), 3 (102060))
@@ -70,11 +68,17 @@ Nc = 102060
 # **************************************************
 # Allocated 2.38068e+07 bytes
 # **************************************************
+
+# Calculation according to Matt Knepley:
+Nv =  19096
+Ne = 125169
+Nf = 208134
+Nc = 102060
 total = 3*Nv*8 + 
 (Nc+Nf+Ne+Nv)*4 + 
 (Nc+Nf+Ne+Nv)*4 + 
 2* (4*Nc + 3*Nf + 2*Ne)*4 +
 (Nc+Nf+Ne)*4 + 
-(Nf+Ne+Nv)*4
+(Nf+Ne+Nv)*4 + Nv*4
 @show total/2^20
 # 16.7 MB for 64-bit integers vs. 6.7 MB for 32-bit integers

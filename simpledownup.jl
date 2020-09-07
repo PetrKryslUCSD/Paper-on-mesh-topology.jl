@@ -35,6 +35,8 @@ function test()
     @show (nshapes(tr03.left), nshapes(tr03.right))
     @show membytes = usedbytes(tr03._v)
     summembytes += membytes
+    
+    # Print the total number of megabytes used to store the database
     @show summembytes/2^20
 
     # vtkwrite("speedtest1", connectivity)
