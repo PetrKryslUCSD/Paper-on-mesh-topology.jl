@@ -1,5 +1,5 @@
 """
-    simpledownup
+    fullonelevel
 
 Compute the mesh topology structures that correspond to the full one-level
 downward and upward adjacency graph. Memory is used to store the downward incidence
@@ -17,6 +17,7 @@ using Test
 include("usedbytes.jl")
 
 function test()
+    ts = time()
     n = 3
     membytes = 0; summembytes = 0
     @info "Initial (3, 0)"
@@ -28,6 +29,7 @@ function test()
     geom = attribute(ir30.right, "geom")
     @show membytes = usedbytes(geom.v)
     summembytes += membytes
+    @show time() - ts
 
     ts = time()
     @info "Skeleton: facets. (2, 0)"
