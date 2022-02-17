@@ -3,6 +3,7 @@ BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 MeshCore = "43a99bba-f459-4d0e-8139-f3df11d847d4"
 MeshSteward = "ffa89bc3-d1bd-4aea-b9f7-e9902d9f56ab"
 PGFPlotsX = "8314cec4-20b6-5062-9cdb-752b83310925"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 
 [compat]
